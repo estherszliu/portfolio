@@ -1,0 +1,60 @@
+@import "../defaults/colors";
+@import "../defaults/breakpoints";
+@import "./utils";
+
+// <!-- graphical component and semantic HTML by used footer element --> //
+footer {
+    background-color: $primary-color;
+    color:$nav-botton-color;
+    padding: 30px 10px 40px 10px;
+    text-align:center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        a {
+            all: unset;
+            cursor: default;
+            i {
+                color: $nav-botton-color;
+                font-size: 30px;
+                padding: 10px;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer-contact {
+        a{  
+            all: unset;
+            border: 1px solid white;
+            padding: 10px;
+            color: $nav-botton-color;
+            text-decoration: none;
+            border-radius: 15px;
+            cursor: pointer;
+            i {
+                color: $nav-botton-color;
+                font-size: 15px;
+            }   
+        }  
+
+    }
+
+
+
+@media screen and (min-width: $large) {
+    footer {
+        .social-media {
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+}

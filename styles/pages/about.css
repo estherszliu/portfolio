@@ -1,0 +1,190 @@
+.header-root {
+  color: rgb(246, 248, 249);
+  background: rgb(25, 43, 5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+  padding: 0px 20px 0px 20px;
+}
+.header-root .profile-message {
+  display: flex;
+  justify-content: center;
+}
+.header-root .profile-message img {
+  border: 2px solid white;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+}
+.header-root .profile-message img:hover {
+  transform: scale(1.2);
+  border: 2px solid pink;
+  cursor: pointer;
+}
+.header-root .profile-message label {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.header-root nav .nav-button {
+  all: unset;
+  padding: 20px 20px 20px 20px;
+}
+.header-root nav .nav-button:hover {
+  color: pink;
+  cursor: pointer;
+}
+.header-root nav .nav-icon {
+  display: none;
+}
+@media only screen and (max-width: 1080px) {
+  .header-root nav .nav-icon {
+    display: block;
+    margin: 0px 10px 0px 0px;
+    font-size: 40px;
+    color: rgb(246, 248, 249);
+  }
+  .header-root nav .nav-icon:hover {
+    cursor: pointer;
+    color: pink;
+  }
+  .header-root nav .nav-buttons-root {
+    background-color: rgb(244, 250, 244);
+    color: rgb(25, 43, 5);
+    position: absolute;
+    right: 30px;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 200px;
+    border: 2px solid rgb(25, 43, 5);
+    border-radius: 5px;
+  }
+  .header-root nav .nav-buttons-root-hide {
+    display: none;
+  }
+}
+
+footer {
+  background-color: rgb(25, 43, 5);
+  color: rgb(246, 248, 249);
+  padding: 30px 10px 40px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+footer .social-media a {
+  all: unset;
+  cursor: default;
+}
+footer .social-media a i {
+  color: rgb(246, 248, 249);
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+footer .footer-contact a {
+  all: unset;
+  border: 1px solid white;
+  padding: 10px;
+  color: rgb(246, 248, 249);
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+footer .footer-contact a i {
+  color: rgb(246, 248, 249);
+  font-size: 15px;
+}
+@media screen and (min-width: 1080px) {
+  footer footer .social-media {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: rgb(252, 253, 251);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-wrap: wrap;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+}
+main section .heading {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px 20px 0px;
+  text-align: center;
+  margin: 0;
+}
+main section .about {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  padding: 50px;
+}
+@media screen and (max-width: 1080px) {
+  main section .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 30px 80px 30px;
+  }
+}
+main section .about article {
+  max-width: 800px;
+  text-align: justify;
+  padding: 0px 40px 0px 0px;
+}
+@media screen and (max-width: 1080px) {
+  main section .about article {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    -moz-text-align-last: center;
+         text-align-last: center;
+    padding: 0px;
+  }
+  main section .about article h2 {
+    text-align: center;
+  }
+}
+main section .about aside img {
+  max-width: 400px;
+  width: 90vw;
+  border: 5px solid rgb(246, 248, 249);
+  border-radius: 50px;
+  overflow: hidden;
+}
+main section .about aside .image-grid-4 {
+  max-width: 400px;
+  width: 90vw;
+}
+main section .about aside .image-grid-4 img {
+  border: 5px solid rgb(246, 248, 249);
+  border-radius: 50px;
+  overflow: hidden;
+}
+main section .about aside .image-grid-row {
+  display: flex;
+}/*# sourceMappingURL=about.css.map */

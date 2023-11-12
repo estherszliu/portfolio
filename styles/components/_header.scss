@@ -1,0 +1,84 @@
+@import "../defaults/colors";
+@import "../defaults/breakpoints";
+@import "./utils";
+
+.header-root{
+    color: $nav-botton-color;
+    background: $primary-color;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    overflow:hidden;
+    height: 80px;
+    padding: 0px 20px 0px 20px;
+
+    // Graphical Component: Profile image with welcome message
+    .profile-message{
+        display: flex;
+        justify-content: center;
+
+        img{
+            border: 2px solid white;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+        }
+        img:hover {
+            transform: scale(1.2);
+            border: 2px solid pink;
+            cursor: pointer;
+        }
+        label{
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    // Text Component: Responsive navigation menu
+    nav {
+        .nav-button{
+            all: unset;
+            padding: 20px 20px 20px 20px;     
+        
+        }
+        .nav-button:hover{
+            color: pink; 
+            cursor: pointer;  
+        }
+        .nav-icon{
+            display: none;
+        }
+
+        @media only screen and (max-width:$large)  {
+            .nav-icon{
+                display:block;
+                margin: 0px 10px 0px 0px;
+                font-size:40px;
+                color:$nav-botton-color;
+    
+            }
+            .nav-icon:hover{
+                cursor: pointer; 
+                color: pink; 
+            }
+            .nav-buttons-root{
+                background-color: $nav-color;
+                color: $primary-color;
+                position: absolute;
+                right: 30px;
+                top:90px;
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                max-width: 200px;
+                border:2px solid $primary-color;
+                border-radius: 5px;
+                
+            }
+            .nav-buttons-root-hide{
+                display: none;
+            }
+        }
+    }
+}

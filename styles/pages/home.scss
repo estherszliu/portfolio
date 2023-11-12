@@ -1,0 +1,71 @@
+@import "../../index";
+@import "../defaults/colors";
+@import "../defaults/breakpoints";
+
+main{
+    display: flex;
+    justify-content: center;    
+    padding: 80px 120px 80px 120px;
+    height: 100%;
+    
+    @media screen and (max-width: $large) {
+        text-align: center;
+        padding: 40px;
+    }
+
+    // Graphical Component: Intro bio with image
+    .bio-root{
+        display: flex;
+        
+        @media screen and (max-width: $large) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .bio-description{
+            max-width: 800px;
+            padding: 0px 60px 0px 0px;
+            p{
+                text-align: justify;
+            }
+    
+            @media screen and (max-width: $large) {
+                padding: 40px;
+                p{
+                    text-align-last: center;
+                }
+            }
+            @media screen and (max-width: $medium) {
+                padding: 30px 0px 30px 0px;
+                p{
+                    text-align-last: center;
+                }
+            }
+        }
+        aside{
+            @include image-large-round();
+        }
+    }
+
+    // Text Component: List of my skills
+    .skills-root {
+        padding: 30px 0px 0px 0px;
+
+        .skills-row-container {
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: $large) {
+                justify-content: center;
+            }
+        }
+        .skill-lozenge {
+            background-color: $nav-color;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+    
+            padding: 3px 10px 3px 10px;
+            margin: 0px 10px 5px 0px;
+    
+            cursor: default;
+        }
+    }
+}

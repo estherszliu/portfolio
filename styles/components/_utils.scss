@@ -1,0 +1,21 @@
+@import "../defaults/colors";
+@import "../defaults/breakpoints";
+
+@mixin image-large-round(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+    img{
+        width: 350px;
+        border-radius: 100%;
+
+        @media screen and (max-width: $large) {
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+
+}
+

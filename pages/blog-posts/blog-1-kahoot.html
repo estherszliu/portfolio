@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <link href="../../styles/pages/blog.css" rel="stylesheet">
+        <!-- Link for fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>My Portfolio</title>
+        <script>
+            function toggleNavMenu() {
+                var e = document.getElementById("nav-buttons-root");
+                if (e.className === "nav-buttons-root") {
+                    e.className = "nav-buttons-root-hide";
+                } else {
+                    e.className = "nav-buttons-root";
+                }
+            }  
+        </script>
+    </head>
+
+    <body>
+
+        <!-- Page Header -->
+        <header class="header-root">
+
+            <!-- Graphical Component: Profile image with welcome message -->
+            <section class="profile-message">
+                <a href="../about.html">
+                    <img alt="profile-image" src="../../images/esther.JPG" width="auto" height="100%">
+                </a>
+                <label>
+                    "Hi, I'm Esther!"
+                </label>
+            </section>
+
+            <!-- Text Component: Responsive navigation menu -->
+            <nav>
+                <div id="nav-buttons-root" class="nav-buttons-root-hide">
+                    <a class="nav-button" href="../../index.html">Home</a>
+                    <a class="nav-button" href="../../pages/about.html">About</a>
+                    <a class="nav-button" href="../../pages/blog.html">Blog</a>
+                    <a class="nav-button" href="../../pages/contact.html">Contact</a>
+                </div>
+                <a class="nav-icon" onclick="toggleNavMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+
+        </header>
+
+        <!-- Page Content -->
+        <main>
+            <div class="blog-heading">
+                <h1>Welcome to my Blog!</h1>
+            </div>
+            <section>
+
+                <!-- Graphical Component: Blog hero image with date and title -->
+                <figure>
+                    <h2>Kahoot Time</h2>
+                    <div class="image-container">
+                        <img src="../../images/kahoot.jpg" alt="kahoot">
+                    </div>
+                    <time>
+                        November 4, 2023
+                    </time>
+                </figure>
+
+                <!-- Text Component: Blog content -->
+                <article class="content">
+                    <p> 
+                        In the ever-evolving landscape of modern education, interactive quizzes like Kahoot have 
+                        become a staple in classrooms worldwide. These digital platforms add a layer of excitement 
+                        to our learning journey, giving us the opportunity to put our knowledge to the test in 
+                        a fast-paced, competitive environment. One particular Kahoot time post, which I recently 
+                        experienced, had me reflecting on the way it effectively bridges the gap between past 
+                        lessons and the ultimate test of our understanding.   
+                        <br>
+                        <br>
+                        As a diligent student who has spent countless hours immersed in the course material, I 
+                        was thrilled when I managed to secure the 7th spot in one of the most recent Kahoot 
+                        sessions. However, what became abundantly clear is that speed is the name of the game. 
+                        The highest-scoring students in Kahoot aren't just knowledgeable; they are lightning-quick 
+                        in their responses. In this blog post, we'll dive into my Kahoot journey, the strategies 
+                        I've picked up along the way, and how these fast-paced quizzes are shaping the educational 
+                        experience for students like me. Let's explore the fascinating world of Kahoot and uncover 
+                        the secrets to success in this dynamic learning environment.                 
+                    </p>
+
+                    <h3>The Kahoot Experience: A Journey of Learning and Competition</h3>
+                    <p>
+                        Kahoot, for those who may not be familiar, is an online learning platform that offers a 
+                        gamified approach to education. It's a tool that educators use to engage students in an 
+                        interactive way, allowing them to assess their knowledge and retention of the material 
+                        through quizzes and surveys. These Kahoot sessions often serve as a review of previous 
+                        lessons, ensuring that students remain connected to the course material and can assess 
+                        their grasp of the subject matter. This format is not only fun but also an excellent way 
+                        to reinforce learning.
+                    </p>
+                    
+                    <h3>The Need for Speed: A Lesson in Quick Thinking</h3>
+                    <p>
+                        My journey to the 7th spot on the Kahoot leaderboard was a rollercoaster ride of 
+                        emotions and challenges. The key to success in Kahoot, as I soon discovered, is 
+                        not just knowledge but the ability to think on your feet. Kahoot quizzes are designed 
+                        to reward swift and accurate answers. If you want to claim the top positions, you 
+                        must be quick with your responses, often with just seconds to spare.
+                    </p>
+                    <p>
+                        The students who consistently secure the top three spots in Kahoot sessions possess 
+                        a unique set of skills. They have mastered the art of reading and comprehending 
+                        questions at lightning speed, often even before the choices are fully revealed. 
+                        It's a bit like being on a game show, where every second counts, and hesitation can 
+                        cost you dearly.
+                    </p>
+                    
+                    <h3>Strategies for Kahoot Success</h3>
+                    <p>
+                        As I aimed to improve my Kahoot ranking, I started implementing a few strategies that 
+                        helped me keep up with the fastest responders:
+                    </p>
+                    <p>
+                        1. <strong>Practice, Practice, Practice</strong>: Familiarity with the Kahoot platform 
+                        and the types of questions asked is crucial. The more you practice, the better you 
+                        become at navigating the interface and understanding the question patterns.
+                    </p>
+                    <p>
+                        2. <strong>Stay Calm and Focused</strong>: The pressure of time can be daunting, but 
+                        staying calm and focused is essential. Panic can lead to hasty mistakes. Take a deep 
+                        breath, read the question thoroughly, and then answer.
+                    </p>
+                    <p>
+                        3. <strong>Preparation is Key</strong>: Reviewing the course material before the Kahoot 
+                        session can be a game-changer. The more you know, the easier it is to respond quickly.
+                    </p>
+                    <p>
+                        4. <strong>Multi-tasking Skills</strong>: Train your brain to quickly switch between the 
+                        question and answer choices. This can save valuable seconds.
+                    </p>
+                    <p>
+                        5. <strong>Use Your Lifelines Wisely</strong>: In some Kahoots, lifelines like 
+                        "Double Points" or "Bomb" can be game-changers. Knowing when and how to use them can give 
+                        you a significant advantage.
+                    </p>
+                    
+                    <h3>The Impact of Kahoot on Education</h3>
+                    <p>
+                        Kahoot's gamified approach to learning has revolutionized the way we engage with course 
+                        material. It's not just about cramming facts and figures; it's about understanding and 
+                        retaining knowledge in an enjoyable and memorable way. Kahoot fosters a sense of community 
+                        among students, as we compete and collaborate to enhance our learning experience.
+                    </p>
+                    <p>
+                        Moreover, the real-time feedback provided by Kahoot quizzes allows educators to identify 
+                        areas where students may be struggling. This invaluable information helps teachers tailor 
+                        their instruction to meet the specific needs of their students, ultimately leading to 
+                        improved learning outcomes.
+                    </p>
+                    
+                    <h3>Conclusion</h3>
+                    <p>
+                        Kahoot has become more than just a platform for testing our knowledge; it's a journey that 
+                        combines learning with the thrill of competition. As I continue to hone my skills and work 
+                        on my response speed, I find myself not only enjoying the experience more but also grasping 
+                        the course material more effectively.
+                    </p>
+                    <p>
+                        So, the next time you find yourself in a Kahoot session, remember that it's not just about 
+                        getting the answers right; it's about getting them right quickly. And in this evolving world 
+                        of education, being able to think on your feet and adapt to new challenges is a valuable 
+                        skill that will serve you well in many aspects of life. Kahoot, in its own unique way, is 
+                        preparing us for the challenges and opportunities that await beyond the classroom.
+                    </p>
+                </article>
+
+                <!-- Text Component: Blog navigation -->
+                <nav>
+                        <a href="../blog.html">
+                            Back to Blog
+                        </a>
+                </nav>
+            </section>
+        </main>
+
+        <!-- Page Footer -->
+        <footer>
+
+            <!-- Graphical Component: Contact me through social media -->
+            <section class="social-media">
+                <h5>Get in touch with me today</h5>
+                <div class="social-contacts-container">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.github.com" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Text Component: Send mail button -->
+            <section class="footer-contact">
+                <a href="mailto: 15076@coderacademy.edu.au">
+                    Send mail
+                    <i class="fa-regular fa-paper-plane"></i>              
+                </a>
+            </section>
+        </footer>
+    </body>
+</html>
