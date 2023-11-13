@@ -1,4 +1,4 @@
-# THIS IS SHUZHEN LIU (ESTHER)'S PORTFOLIO
+# THIS IS SHUZHEN LIU'S (ESTHER'S) PORTFOLIO
 
 
 ### Portfolio website
@@ -10,26 +10,52 @@
 ### Presentation
 [link to presentation]()
 
-## Overview
-This is a portfolio wedsite to display about SHUHZNE (Esther)'s work experience, hobbies,and how she want to become developer, demonstrate her skills and also ber social life, and get in touch with her. 
+## Purpose
+This is a portfolio website to display about Shuzhen's (Esther's) work experience, hobbies, why she wants to become a developer, demonstrate her skills and also her social life, and finally a way get in touch with her. 
 
-The portfolio wedsite has four main page + five blog post page inside of the blog page. Which is:
+This website will be used to showcase my abilities, skills and interests to any potential employers.
+
+## Target Audience
+
+The target audience for this website will be Recruiters, Hiring managers, and Employers who have a high level of knowledge and experience with software development. It is expected that most visitors will know about the technologies and experiences I have listed. 
+
+## Tech Stack
+
+This website was built using the following tech stack.
+* HTML
+* SCSS/CSS
+* Javascript
+* Github
+* Figma for designs
+* Netlify for website deployment
+
+## Overview
+The portfolio wedsite has four main pages + five blog post pages nested below the main blog page. The structure looks like this:
 * Home
 * About
 * Blog 
+    * Blog 1
+    * Blog 2
+    * Blog 3
+    * Blog 4
+    * Blog 5 
 * Contact
-## Sitmap 
-Here is the picture for sitemap :
-![sitemap](image.png)
-## Components
 
-### Header
-Header is the component at the top of the website. It contains picture, message, navigation bar and a nav-icon. 
-The picture when on click will direct to the about page.
-The nav-icon has a javascript function which used bootstrap library. 
+## Sitmap 
+Here is the picture of the sitemap :
+![sitemap](image.png)
+
+## Common Page Components
+
+### Page Header
+The page header is the component at the top of the website. It contains pictures, messages, a navigation bar and also a nav-icon.
+
+When you click on the profile image, it will navigate to the About page. All the other buttons navigate to the screen displayed in the text. 
 ![header with navidation bar](image-1.png)
 
+For smaller screens such as mobile and tablets, the navbar changes to a dropdown hamburger menu. The hamburger nav-icon here has a javascript function which is used to show and hide the dropdown nav menu.
 ![Header with nav-icon](image-2.png)
+
 Here is the code for the header:
 ```html
  <header class="header-root">
@@ -56,7 +82,7 @@ Here is the code for the header:
     </nav>
  </header>
 ```
-Here is the nav-icon which locate in the head tag:
+Here is the function for the nav-icon which is locate in the head tag and used to change the classname of the component:
 ```html
 <script>
     function toggleNavMenu() {   
@@ -71,8 +97,10 @@ Here is the nav-icon which locate in the head tag:
 ```
 
 ### Footer
-Footer has a text, social media links and a hypertext reference to send a mail. 
+
+The footer has a text message, social media links, and a hypertext reference to send an email. 
 ![Footer](image-3.png)
+
 Here is the code for footer:
 ```html
  <footer>
@@ -103,11 +131,11 @@ Here is the code for footer:
 ```
 
 ### Home page
-In the Home page main tag, has two sections, first section is introduction and a picture, second section is lozenge display what skills I got.
+In the Home page main tag, there is two sections, the first section is an introduction and a picture, second section is set of lozenges display what skills I have.
 
 ![Home page](image-4.png)
 
-Here is the code for the home page:
+Here is a snippet of the code:
 ```html
 <main>
     <section>
@@ -125,16 +153,7 @@ Here is the code for the home page:
                 </div>
                 <div class="bio-description">
                     <p>
-                        Hi! Welcome to my portfolio! 
-                        <br>
-                        <br>
-                            I'm Esther, an aspiring software developer eager to embark on an exciting journey in the tech world. Proficient in Python, JavaScript, HTML, CSS, and Git, I'm ready to contribute my skills to many exciting projects.
-                            With a strong foundation in these key technologies, I bring a problem-solving mindset and a commitment to continuous learning. I'm passionate about crafting efficient, user-friendly solutions that make a real impact. My experience in Python spans data analysis, automation, and application development, while my expertise in front-end technologies ensures a seamless user experience.
-                            I believe in the power of code to transform ideas into reality, and I'm dedicated to pushing the boundaries of what's possible in software development. I approach each project with enthusiasm and a desire to excel, embracing challenges as opportunities for growth.
-                            Let's collaborate to turn concepts into functional, innovative, and elegant software solutions. I'm here to help you achieve your digital goals and bring your vision to life.
-                        <br>
-                        <br>
-                        Feel free to look around and get to know more about me and where I want to go with my career.
+                        Text here
                     </p>
                 </div>
             </div>
@@ -168,11 +187,11 @@ Here is the code for the home page:
 ```
 
 ### About page
-The About page has three articles, the first and third one both with a picture as aside, but the second article has an aside with image grid.
-![First section](image-5.png)
-![Section section](image-6.png)
-![Third section](image-7.png)
-Here is the code for the About page:
+The About page has three articles, the first and third one both with a picture as a aside, but the second article has an aside with image grid showing 4 images side by side.
+![First section](image-13.png)
+![Second section](image-14.png)
+![Third section](image-15.png)
+Here is a snippet of the code:
 ```html
 <main>   
     <section>
@@ -187,24 +206,7 @@ Here is the code for the About page:
                     My Previous Career
                 </h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Facilis, nam. Rem dolores earum, esse nam labore
-                    sit quidem expedita dolore soluta explicabo doloribus
-                    nihil consequatur repellendus nostrum, enim eum.
-                    Nostrum! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. In non voluptatum veritatis fugiat
-                    obcaecati laborum dolorem facere optio vero quas illo
-                    temporibus atque deserunt harum ipsam, reprehenderit
-                    excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. In distinctio tempore
-                    numquam beatae deleniti odit, maiores alias
-                    reprehenderit commodi et officiis perferendis fugiat
-                    voluptatem cum id, voluptates doloribus quis
-                    dignissimos! Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Maxime atque eos fuga. Quam
-                    consequatur magni necessitatibus exercitationem ea
-                    suscipit reprehenderit incidunt, totam libero sed maxime
-                    quos deleniti amet, quisquam aliquid!
+                    Text here
                 </p>
             </article>
 
@@ -221,24 +223,7 @@ Here is the code for the About page:
                     My Hobbies
                 </h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Facilis, nam. Rem dolores earum, esse nam labore
-                    sit quidem expedita dolore soluta explicabo doloribus
-                    nihil consequatur repellendus nostrum, enim eum.
-                    Nostrum! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. In non voluptatum veritatis fugiat
-                    obcaecati laborum dolorem facere optio vero quas illo
-                    temporibus atque deserunt harum ipsam, reprehenderit
-                    excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. In distinctio tempore
-                    numquam beatae deleniti odit, maiores alias
-                    reprehenderit commodi et officiis perferendis fugiat
-                    voluptatem cum id, voluptates doloribus quis
-                    dignissimos! Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Maxime atque eos fuga. Quam
-                    consequatur magni necessitatibus exercitationem ea
-                    suscipit reprehenderit incidunt, totam libero sed maxime
-                    quos deleniti amet, quisquam aliquid!
+                    Text here
                 </p>
             </article>
 
@@ -264,24 +249,7 @@ Here is the code for the About page:
                     Why I Want to be a Developer
                 </h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Facilis, nam. Rem dolores earum, esse nam labore
-                    sit quidem expedita dolore soluta explicabo doloribus
-                    nihil consequatur repellendus nostrum, enim eum.
-                    Nostrum! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. In non voluptatum veritatis fugiat
-                    obcaecati laborum dolorem facere optio vero quas illo
-                    temporibus atque deserunt harum ipsam, reprehenderit
-                    excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. In distinctio tempore
-                    numquam beatae deleniti odit, maiores alias
-                    reprehenderit commodi et officiis perferendis fugiat
-                    voluptatem cum id, voluptates doloribus quis
-                    dignissimos! Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Maxime atque eos fuga. Quam
-                    consequatur magni necessitatibus exercitationem ea
-                    suscipit reprehenderit incidunt, totam libero sed maxime
-                    quos deleniti amet, quisquam aliquid!
+                    Text here
                 </p>
             </article>
 
@@ -295,10 +263,10 @@ Here is the code for the About page:
 ```
 
 ### Blog page
-The Blog page has a text to top in the middle and follow by five section, which once section is one blog. Each section contain a figure (tittl, image, time), an article and a hypertext reference to link to read the full blog post. 
+The Blog page has a title at the top of the page in the middle and is followed by five sections, where each section is one blog summary. Each section contains a figure (title, image, date), an article and a hypertext reference to link to read the full blog post. 
 ![Blod page part1](image-8.png)
-![Blog page part2](image-9.png)
-Here is the code:
+![Blod page part2](image-16.png)
+Here is a snippet of the code:
 ```html
 <main>
     <div class="blog-heading">
@@ -321,12 +289,7 @@ Here is the code:
         <!-- Text Component: Blog summary -->
         <article class="content">
             <p>
-                In the ever-evolving landscape of modern education, interactive quizzes like Kahoot have 
-                become a staple in classrooms worldwide. These digital platforms add a layer of excitement 
-                to our learning journey, giving us the opportunity to put our knowledge to the test in a 
-                fast-paced, competitive environment. One particular Kahoot time post, which I recently experienced, 
-                had me reflecting on the way it effectively bridges the gap between past lessons and the ultimate 
-                test of our understanding.
+                Text here
             </p>
         </article>
 
@@ -338,194 +301,17 @@ Here is the code:
         </nav>
     </section>
 
-    <!-- Desk Setup Blog Post -->
-    <section>
-        <!-- Graphical Component: Blog hero image with date and title -->
-        <figure>
-            <h2>All Set for my Study!</h2>
-            <div class="image-container">
-                <img src="../images/desk.jpg" alt="All set for study">
-            </div>
-            <time>
-                October 15, 2023
-            </time>
-        </figure>
+    ... more blogs here
 
-        <!-- Text Component: Blog summary -->
-        <article class="content">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Facilis, nam. Rem dolores earum, esse nam labore
-                sit quidem expedita dolore soluta explicabo doloribus
-                nihil consequatur repellendus nostrum, enim eum.
-                Nostrum! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. In non voluptatum veritatis fugiat
-                obcaecati laborum dolorem facere optio vero quas illo
-                temporibus atque deserunt harum ipsam, reprehenderit
-                excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. In distinctio tempore
-                numquam beatae deleniti odit, maiores alias
-                reprehenderit commodi et officiis perferendis fugiat
-                voluptatem cum id, voluptates doloribus quis
-                dignissimos! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Maxime atque eos fuga. Quam
-                consequatur magni necessitatibus exercitationem ea
-                suscipit reprehenderit incidunt, totam libero sed maxime
-                quos deleniti amet, quisquam aliquid!
-            </p>
-        </article>
-
-        <!-- Text Component: Blog navigation -->
-        <nav>
-            <a href="./blog-posts/blog-2-allset.html">
-                Read Full Blog Post
-            </a>
-        </nav>
-    </section>
-
-    <!-- Feeding Kangaroo Blog Post -->
-    <section>
-        <!-- Graphical Component: Blog hero image with date and title -->
-        <figure>
-            <h2>Feeding Kangaroos</h2>
-            <div class="image-container">
-                <img src="../images/zoo.jpg" alt="Feeding kangaroos">
-            </div>
-            <time>
-                September 5, 2023
-            </time>
-        </figure>
-
-        <!-- Text Component: Blog summary -->
-        <article class="content">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Facilis, nam. Rem dolores earum, esse nam labore
-                sit quidem expedita dolore soluta explicabo doloribus
-                nihil consequatur repellendus nostrum, enim eum.
-                Nostrum! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. In non voluptatum veritatis fugiat
-                obcaecati laborum dolorem facere optio vero quas illo
-                temporibus atque deserunt harum ipsam, reprehenderit
-                excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. In distinctio tempore
-                numquam beatae deleniti odit, maiores alias
-                reprehenderit commodi et officiis perferendis fugiat
-                voluptatem cum id, voluptates doloribus quis
-                dignissimos! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Maxime atque eos fuga. Quam
-                consequatur magni necessitatibus exercitationem ea
-                suscipit reprehenderit incidunt, totam libero sed maxime
-                quos deleniti amet, quisquam aliquid!
-            </p>
-        </article>
-
-        <!-- Text Component: Blog navigation -->
-        <nav>
-            <a href="./blog-posts/blog-3-kangaroos.html">
-                Read Full Blog Post
-            </a>
-        </nav>
-    </section>
-
-    <!-- An Interesting House Blog Post -->
-    <section>
-        <!-- Graphical Component: Blog hero image with date and title -->
-        <figure>
-            <h2>An Interesting House</h2>
-            <div class="image-container">
-                <img src="../images/view.jpg" alt="An interesting house">
-            </div>
-            <time>
-                August 9, 2023
-            </time>
-        </figure>
-
-        <!-- Text Component: Blog summary -->
-        <article class="content">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Facilis, nam. Rem dolores earum, esse nam labore
-                sit quidem expedita dolore soluta explicabo doloribus
-                nihil consequatur repellendus nostrum, enim eum.
-                Nostrum! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. In non voluptatum veritatis fugiat
-                obcaecati laborum dolorem facere optio vero quas illo
-                temporibus atque deserunt harum ipsam, reprehenderit
-                excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. In distinctio tempore
-                numquam beatae deleniti odit, maiores alias
-                reprehenderit commodi et officiis perferendis fugiat
-                voluptatem cum id, voluptates doloribus quis
-                dignissimos! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Maxime atque eos fuga. Quam
-                consequatur magni necessitatibus exercitationem ea
-                suscipit reprehenderit incidunt, totam libero sed maxime
-                quos deleniti amet, quisquam aliquid!
-            </p>
-        </article>
-
-        <!-- Text Component: Blog navigation -->
-        <nav>
-            <a href="./blog-posts/blog-4-house.html">
-                Read Full Blog Post
-            </a>
-        </nav>
-    </section>
-
-    <!-- Best Dessert Ever Blog Post -->
-    <section>
-        <!-- Graphical Component: Blog hero image with date and title -->
-        <figure>
-            <h2>Best Dessert Ever</h2>
-            <div class="image-container">
-                <img src="../images/heart.jpg" alt="Best dessert ever">
-            </div>
-            <time>
-                July 3, 2023
-            </time>
-        </figure>
-
-        <!-- Text Component: Blog summary -->
-        <article class="content">
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Facilis, nam. Rem dolores earum, esse nam labore
-                sit quidem expedita dolore soluta explicabo doloribus
-                nihil consequatur repellendus nostrum, enim eum.
-                Nostrum! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. In non voluptatum veritatis fugiat
-                obcaecati laborum dolorem facere optio vero quas illo
-                temporibus atque deserunt harum ipsam, reprehenderit
-                excepturi recusandae quasi. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. In distinctio tempore
-                numquam beatae deleniti odit, maiores alias
-                reprehenderit commodi et officiis perferendis fugiat
-                voluptatem cum id, voluptates doloribus quis
-                dignissimos! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Maxime atque eos fuga. Quam
-                consequatur magni necessitatibus exercitationem ea
-                suscipit reprehenderit incidunt, totam libero sed maxime
-                quos deleniti amet, quisquam aliquid!
-            </p>
-        </article>
-
-        <!-- Text Component: Blog navigation -->
-        <nav>
-            <a href="./blog-posts/blog-5-dessert.html">
-                Read Full Blog Post
-            </a>
-        </nav>
-    </section>
 </main>
 ```
 
 ### The Read Full Blog Post
 The Read Full Blog Post is the on the Blog page when you want to read the full Blog page, it will direct to a html which contain the single blog contents, which has the same post title, picture, time and article. On the bottom after the article, also has a button of Back to Blog which will direct back to the main blog page. 
 
-![blog post page](image-10.png)
+![Back to Blog](image-17.png)
 
-Here is the code:
+Here is a snippet of the code:
 ```html
 <main>
     <div class="blog-heading">
@@ -546,109 +332,7 @@ Here is the code:
 
         <!-- Text Component: Blog content -->
         <article class="content">
-            <p> 
-                In the ever-evolving landscape of modern education, interactive quizzes like Kahoot have 
-                become a staple in classrooms worldwide. These digital platforms add a layer of excitement 
-                to our learning journey, giving us the opportunity to put our knowledge to the test in 
-                a fast-paced, competitive environment. One particular Kahoot time post, which I recently 
-                experienced, had me reflecting on the way it effectively bridges the gap between past 
-                lessons and the ultimate test of our understanding.   
-                <br>
-                <br>
-                As a diligent student who has spent countless hours immersed in the course material, I 
-                was thrilled when I managed to secure the 7th spot in one of the most recent Kahoot 
-                sessions. However, what became abundantly clear is that speed is the name of the game. 
-                The highest-scoring students in Kahoot aren't just knowledgeable; they are lightning-quick 
-                in their responses. In this blog post, we'll dive into my Kahoot journey, the strategies 
-                I've picked up along the way, and how these fast-paced quizzes are shaping the educational 
-                experience for students like me. Let's explore the fascinating world of Kahoot and uncover 
-                the secrets to success in this dynamic learning environment.                 
-            </p>
-
-            <h3>The Kahoot Experience: A Journey of Learning and Competition</h3>
-            <p>
-                Kahoot, for those who may not be familiar, is an online learning platform that offers a 
-                gamified approach to education. It's a tool that educators use to engage students in an 
-                interactive way, allowing them to assess their knowledge and retention of the material 
-                through quizzes and surveys. These Kahoot sessions often serve as a review of previous 
-                lessons, ensuring that students remain connected to the course material and can assess 
-                their grasp of the subject matter. This format is not only fun but also an excellent way 
-                to reinforce learning.
-            </p>
-            
-            <h3>The Need for Speed: A Lesson in Quick Thinking</h3>
-            <p>
-                My journey to the 7th spot on the Kahoot leaderboard was a rollercoaster ride of 
-                emotions and challenges. The key to success in Kahoot, as I soon discovered, is 
-                not just knowledge but the ability to think on your feet. Kahoot quizzes are designed 
-                to reward swift and accurate answers. If you want to claim the top positions, you 
-                must be quick with your responses, often with just seconds to spare.
-            </p>
-            <p>
-                The students who consistently secure the top three spots in Kahoot sessions possess 
-                a unique set of skills. They have mastered the art of reading and comprehending 
-                questions at lightning speed, often even before the choices are fully revealed. 
-                It's a bit like being on a game show, where every second counts, and hesitation can 
-                cost you dearly.
-            </p>
-            
-            <h3>Strategies for Kahoot Success</h3>
-            <p>
-                As I aimed to improve my Kahoot ranking, I started implementing a few strategies that 
-                helped me keep up with the fastest responders:
-            </p>
-            <p>
-                1. <strong>Practice, Practice, Practice</strong>: Familiarity with the Kahoot platform 
-                and the types of questions asked is crucial. The more you practice, the better you 
-                become at navigating the interface and understanding the question patterns.
-            </p>
-            <p>
-                2. <strong>Stay Calm and Focused</strong>: The pressure of time can be daunting, but 
-                staying calm and focused is essential. Panic can lead to hasty mistakes. Take a deep 
-                breath, read the question thoroughly, and then answer.
-            </p>
-            <p>
-                3. <strong>Preparation is Key</strong>: Reviewing the course material before the Kahoot 
-                session can be a game-changer. The more you know, the easier it is to respond quickly.
-            </p>
-            <p>
-                4. <strong>Multi-tasking Skills</strong>: Train your brain to quickly switch between the 
-                question and answer choices. This can save valuable seconds.
-            </p>
-            <p>
-                5. <strong>Use Your Lifelines Wisely</strong>: In some Kahoots, lifelines like 
-                "Double Points" or "Bomb" can be game-changers. Knowing when and how to use them can give 
-                you a significant advantage.
-            </p>
-            
-            <h3>The Impact of Kahoot on Education</h3>
-            <p>
-                Kahoot's gamified approach to learning has revolutionized the way we engage with course 
-                material. It's not just about cramming facts and figures; it's about understanding and 
-                retaining knowledge in an enjoyable and memorable way. Kahoot fosters a sense of community 
-                among students, as we compete and collaborate to enhance our learning experience.
-            </p>
-            <p>
-                Moreover, the real-time feedback provided by Kahoot quizzes allows educators to identify 
-                areas where students may be struggling. This invaluable information helps teachers tailor 
-                their instruction to meet the specific needs of their students, ultimately leading to 
-                improved learning outcomes.
-            </p>
-            
-            <h3>Conclusion</h3>
-            <p>
-                Kahoot has become more than just a platform for testing our knowledge; it's a journey that 
-                combines learning with the thrill of competition. As I continue to hone my skills and work 
-                on my response speed, I find myself not only enjoying the experience more but also grasping 
-                the course material more effectively.
-            </p>
-            <p>
-                So, the next time you find yourself in a Kahoot session, remember that it's not just about 
-                getting the answers right; it's about getting them right quickly. And in this evolving world 
-                of education, being able to think on your feet and adapt to new challenges is a valuable 
-                skill that will serve you well in many aspects of life. Kahoot, in its own unique way, is 
-                preparing us for the challenges and opportunities that await beyond the classroom.
-            </p>
+            Text here
         </article>
 
         <!-- Text Component: Blog navigation -->
@@ -666,7 +350,7 @@ The Contact page has two section, the first section has heading, image, contact 
 ![Section 1](image-11.png)
 ![Section 2](image-12.png)
 
-Here is the code for the Contact Page:
+Here is a snippet of the code:
 ```html
  <main>
     <div class="contact-heading">
