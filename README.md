@@ -8,8 +8,7 @@
 [link to git](https://github.com/estherszliu/portfolio)
 
 ### Presentation
-[link to presentation]()
-
+[link to presentation](https://youtu.be/rvz773aSSns)
 ## Purpose
 This is a portfolio website to display about Shuzhen's (Esther's) work experience, hobbies, why she wants to become a developer, demonstrate her skills and also her social life, and finally a way get in touch with her. 
 
@@ -43,7 +42,7 @@ The portfolio wedsite has four main pages + five blog post pages nested below th
 
 ## Sitmap 
 Here is the picture of the sitemap :
-![sitemap](image.png)
+![sitemap](./doc_readme/image.png)
 
 ## Common Page Components
 
@@ -51,10 +50,10 @@ Here is the picture of the sitemap :
 The page header is the component at the top of the website. It contains pictures, messages, a navigation bar and also a nav-icon.
 
 When you click on the profile image, it will navigate to the About page. All the other buttons navigate to the screen displayed in the text. 
-![header with navidation bar](image-1.png)
+![header with navidation bar](./doc_readme/image-1.png)
 
 For smaller screens such as mobile and tablets, the navbar changes to a dropdown hamburger menu. The hamburger nav-icon here has a javascript function which is used to show and hide the dropdown nav menu.
-![Header with nav-icon](image-2.png)
+![Header with nav-icon](./doc_readme/image-2.png)
 
 Here is the code for the header:
 ```html
@@ -70,12 +69,12 @@ Here is the code for the header:
     </section>
     <!-- Text Component: Responsive navigation menu -->
     <nav>
-        <div id="nav-buttons-root" class="nav-buttons-root-hide">
+        <section id="nav-buttons-root" class="nav-buttons-root-hide">
             <a class="nav-button" href="./index.html">Home</a>
             <a class="nav-button" href="./pages/about.html">About</a>
             <a class="nav-button" href="./pages/blog.html">Blog</a>
             <a class="nav-button" href="./pages/contact.html">Contact</a>
-        </div>
+        </section>
         <a class="nav-icon" onclick="toggleNavMenu()">
             <i class="fa fa-bars"></i>
         </a>
@@ -99,7 +98,7 @@ Here is the function for the nav-icon which is locate in the head tag and used t
 ### Footer
 
 The footer has a text message, social media links, and a hypertext reference to send an email. 
-![Footer](image-3.png)
+![Footer](./doc_readme/image-3.png)
 
 Here is the code for footer:
 ```html
@@ -107,7 +106,7 @@ Here is the code for footer:
     <!-- Graphical Component: Contact me through social media -->
     <section class="social-media">
         <h5>Get in touch with me today</h5>
-        <div class="social-contacts-container">
+        <section class="social-contacts-container">
             <a href="https://www.facebook.com" target="_blank">
                 <i class="fa-brands fa-facebook"></i>
             </a>
@@ -117,7 +116,7 @@ Here is the code for footer:
             <a href="https://www.linkedin.com" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-        </div>
+        </section>
     </section>
 
     <!-- Text Component: Send mail button -->
@@ -133,7 +132,7 @@ Here is the code for footer:
 ### Home page
 In the Home page main tag, there is two sections, the first section is an introduction and a picture, second section is set of lozenges display what skills I have.
 
-![Home page](image-4.png)
+![Home page](./doc_readme/image-4.png)
 
 Here is a snippet of the code:
 ```html
@@ -142,21 +141,21 @@ Here is a snippet of the code:
 
         <!-- Graphical Component: Intro bio about me with an image -->
         <section class="bio-root">
-            <div>
-                <div>
+            <section>
+                <section>
                     <h1>
                         Shuzhen Liu(Esther)
                     </h1> 
                     <h4>
                         Software developer
                     </h4>
-                </div>
-                <div class="bio-description">
+                </section>
+                <section class="bio-description">
                     <p>
                         Text here
                     </p>
-                </div>
-            </div>
+                </section>
+            </section>
             <aside>
                 <img src="./images/Esther1.jpg" alt="esther1"/>
             </aside>  
@@ -167,20 +166,20 @@ Here is a snippet of the code:
             <h5>
                 My Skills
             </h5>
-            <div class="skills-row-container">
-                <div class="skill-lozenge">HTML</div>
-                <div class="skill-lozenge">CSS</div>
-                <div class="skill-lozenge">Python</div>
-                <div class="skill-lozenge">Git</div>
-                <div class="skill-lozenge">Web Development</div>
-            </div>
-            <div class="skills-row-container">
-                <div class="skill-lozenge">Flask</div>
-                <div class="skill-lozenge">MySQL</div>
-                <div class="skill-lozenge">Backend Development</div>
-                <div class="skill-lozenge">OOP</div>
-                <div class="skill-lozenge">SASS</div>
-            </div>
+            <section class="skills-row-container">
+                <section class="skill-lozenge">HTML</section>
+                <section class="skill-lozenge">CSS</section>
+                <section class="skill-lozenge">Python</section>
+                <section class="skill-lozenge">Git</section>
+                <section class="skill-lozenge">Web Development</section>
+            </section>
+            <section class="skills-row-container">
+                <section class="skill-lozenge">Flask</section>
+                <section class="skill-lozenge">MySQL</section>
+                <section class="skill-lozenge">Backend Development</section>
+                <section class="skill-lozenge">OOP</section>
+                <section class="skill-lozenge">SASS</section>
+            </section>
         </section>
     </section>
 </main>
@@ -188,17 +187,17 @@ Here is a snippet of the code:
 
 ### About page
 The About page has three articles, the first and third one both with a picture as a aside, but the second article has an aside with image grid showing 4 images side by side.
-![First section](image-13.png)
-![Second section](image-14.png)
-![Third section](image-15.png)
+![First section](./doc_readme/image-13.png)
+![Second section](./doc_readme/image-14.png)
+![Third section](./doc_readme/image-15.png)
 Here is a snippet of the code:
 ```html
 <main>   
     <section>
-        <div class="heading">
+        <section class="heading">
             <h1>About Me</h1>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
 
             <!-- Text Component: Article with Header -->
             <article>
@@ -214,8 +213,8 @@ Here is a snippet of the code:
             <aside>
                 <img src="../images/Esther3.jpg" alt="esther3"/>
             </aside>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
 
             <!-- Text Component: Article with Header -->
             <article>
@@ -229,19 +228,19 @@ Here is a snippet of the code:
 
                 <!--Graphical Component: Side Image Grid-->
             <aside>
-                <div class="image-grid-4">
-                    <div class="image-grid-row">
+                <section class="image-grid-4">
+                    <section class="image-grid-row">
                         <img src="../images/coffee.jpg" alt="coffee"/>
                         <img src="../images/anniversary.jpg" alt="anniversary"/>
-                    </div>
-                    <div class="image-grid-row">
+                    </section>
+                    <section class="image-grid-row">
                         <img src="../images/birthday.jpg" alt="birthday"/>
                         <img src="../images/cake.jpg" alt="cake"/>
-                    </div>
-                </div>
+                    </section>
+                </section>
             </aside>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
 
             <!-- Text Component: Article with Header -->
             <article>
@@ -257,30 +256,30 @@ Here is a snippet of the code:
             <aside>
                 <img src="../images/Esther2.jpg" alt="esther2"/>
             </aside>
-        </div>
+        </section>
     </section>
 </main>
 ```
 
 ### Blog page
 The Blog page has a title at the top of the page in the middle and is followed by five sections, where each section is one blog summary. Each section contains a figure (title, image, date), an article and a hypertext reference to link to read the full blog post. 
-![Blod page part1](image-8.png)
-![Blod page part2](image-16.png)
+![Blod page part1](./doc_readme/image-8.png)
+![Blod page part2](./doc_readme/image-16.png)
 Here is a snippet of the code:
 ```html
 <main>
-    <div class="blog-heading">
+    <section class="blog-heading">
         <h1>Welcome to my Blog!</h1>
-    </div>
+    </section>
         
     <!-- Kahoot Blog Post -->
     <section>
         <!-- Graphical Component: Blog hero image with date and title -->
         <figure>
             <h2>Kahoot Time</h2>
-            <div class="image-container">
+            <section class="image-container">
                 <img src="../images/kahoot.jpg" alt="Kahoot">
-            </div>
+            </section>
             <time>
                 November 4, 2023
             </time>
@@ -309,22 +308,22 @@ Here is a snippet of the code:
 ### The Read Full Blog Post
 The Read Full Blog Post is the on the Blog page when you want to read the full Blog page, it will direct to a html which contain the single blog contents, which has the same post title, picture, time and article. On the bottom after the article, also has a button of Back to Blog which will direct back to the main blog page. 
 
-![Back to Blog](image-17.png)
+![Back to Blog](./doc_readme/image-17.png)
 
 Here is a snippet of the code:
 ```html
 <main>
-    <div class="blog-heading">
+    <section class="blog-heading">
         <h1>Welcome to my Blog!</h1>
-    </div>
+    </section>
     <section>
 
         <!-- Graphical Component: Blog hero image with date and title -->
         <figure>
             <h2>Feeding Kangaroos</h2>
-            <div class="image-container">
+            <section class="image-container">
                 <img src="../images/zoo.jpg" alt="Feeding kangaroos">
-            </div>
+            </section>
             <time>
                 September 5, 2023
             </time>
@@ -347,15 +346,15 @@ Here is a snippet of the code:
 
 ### Contact Page
 The Contact page has two section, the first section has heading, image, contact details, social media links and a bottom to download CV. The seccond section has a contact form which user can input their name, email, subject, messages. 
-![Section 1](image-11.png)
-![Section 2](image-12.png)
+![Section 1](./doc_readme/image-11.png)
+![Section 2](./doc_readme/image-12.png)
 
 Here is a snippet of the code:
 ```html
  <main>
-    <div class="contact-heading">
+    <section class="contact-heading">
         <h2>Contact Me</h2>
-    </div>
+    </section>
     <section class="body-content">
         <section class="contact-me-container">
 
@@ -371,19 +370,19 @@ Here is a snippet of the code:
 
                 <!-- Text Component: Contact Item -->
                 <section class="contact-item">
-                    <div class="contact-title">
+                    <section class="contact-title">
                         <i class="fa-solid fa-envelope"></i>
                         <h4>Email</h4>
-                    </div>
+                    </section>
                     <p>15076@coderacademy.edu.au</p>
                 </section>
 
                 <!-- Text Component: Contact Item -->
                 <section class="contact-item">
-                    <div class="contact-title">
+                    <section class="contact-title">
                         <i class="fa-solid fa-location-dot"></i>
                         <h4>Address</h4>
-                    </div>
+                    </section>
                     <p>Brisbane, QLD</p>
                 </section>
 
@@ -412,29 +411,29 @@ Here is a snippet of the code:
             <section class="contact-form">
                 <h4>Get in Touch Today</h4>
                 <form>
-                    <div class="form-input-container">
+                    <section class="form-input-container">
                         <label>Name:</label>
                         <input class="form-input">
-                    </div>
-                    <div class="form-input-container">
+                    </section>
+                    <section class="form-input-container">
                         <label>Email:</label>
                         <input class="form-input">
-                    </div>
-                    <div class="form-input-container">
+                    </section>
+                    <section class="form-input-container">
                         <label>Subject: </label>
                         <input class="form-input">
-                    </div>
-                    <div class="form-input-container">
+                    </section>
+                    <section class="form-input-container">
                         <label>Messages:  </label>
                         <textarea
                             rows="3"
                             class="form-input"
                             id="form-textarea"
                         ></textarea>
-                    </div>
-                    <div class="btn-div">
+                    </section>
+                    <section class="btn-div">
                         <button id="submit">Submit</button>
-                    </div>
+                    </section>
                 </form>
             </section>
         </section>
