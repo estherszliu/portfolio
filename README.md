@@ -193,7 +193,7 @@ The About page has three articles, the first and third one both with a picture a
 Here is a snippet of the code:
 ```html
 <main>   
-    <section>
+    <section class="box">
         <section class="heading">
             <h1>About Me</h1>
         </section>
