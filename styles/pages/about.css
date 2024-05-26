@@ -1,39 +1,54 @@
 .header-root {
-  color: rgb(246, 248, 249);
-  background: rgb(25, 43, 5);
+  color: rgb(255, 255, 255);
+  background: rgb(34, 85, 23);
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   height: 80px;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1000;
 }
 .header-root .profile-message {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .header-root .profile-message img {
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
 }
 .header-root .profile-message img:hover {
-  transform: scale(1.2);
-  border: 2px solid pink;
+  transform: scale(1.1);
+  border: 2px solid rgb(144, 238, 144);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .header-root .profile-message label {
   padding-left: 20px;
   display: flex;
   align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 .header-root nav .nav-button {
   all: unset;
-  padding: 20px 20px 20px 20px;
+  padding: 16px 24px 16px 24px;
+  margin: -4.5px;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
 }
 .header-root nav .nav-button:hover {
-  color: pink;
+  color: rgb(144, 238, 144);
+  border-bottom: 2px solid rgb(144, 238, 144);
   cursor: pointer;
 }
 .header-root nav .nav-icon {
@@ -44,33 +59,50 @@
     display: block;
     margin: 0px 10px 0px 0px;
     font-size: 40px;
-    color: rgb(246, 248, 249);
+    color: rgb(255, 255, 255);
   }
   .header-root nav .nav-icon:hover {
     cursor: pointer;
-    color: pink;
+    color: rgb(144, 238, 144);
   }
   .header-root nav .nav-buttons-root {
-    background-color: rgb(244, 250, 244);
-    color: rgb(25, 43, 5);
+    all: unset;
+    background-color: rgb(34, 85, 23);
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 90px;
     display: flex;
     flex-direction: column;
     width: 60%;
     max-width: 200px;
-    border: 2px solid rgb(25, 43, 5);
+    border: 2px solid rgb(34, 85, 23);
     border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 9999;
   }
   .header-root nav .nav-buttons-root-hide {
     display: none;
   }
+  .header-root nav .nav-button {
+    all: unset;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .header-root nav .nav-button:hover {
+    all: unset;
+    padding: 10px 20px;
+    background-color: rgb(34, 85, 23);
+    color: rgb(255, 255, 255);
+  }
 }
 
 footer {
-  background-color: rgb(25, 43, 5);
-  color: rgb(246, 248, 249);
+  background-color: rgb(34, 85, 23);
+  color: rgb(255, 255, 255);
   padding: 30px 10px 40px 10px;
   text-align: center;
   display: flex;
@@ -87,24 +119,38 @@ footer .social-media a {
   cursor: default;
 }
 footer .social-media a i {
-  color: rgb(246, 248, 249);
-  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
 }
 footer .footer-contact a {
   all: unset;
-  border: 1px solid white;
-  padding: 10px;
-  color: rgb(246, 248, 249);
+  display: inline-block;
+  border: 2px solid white;
+  padding: 15px 30px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 25px;
+  background: #327d22;
+  font-size: 1.2em;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+footer .footer-contact a:hover {
+  background-color: #42a52d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 footer .footer-contact a i {
-  color: rgb(246, 248, 249);
-  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+footer .footer-contact a i:hover {
+  color: white;
 }
 @media screen and (min-width: 1080px) {
   footer footer .social-media {
@@ -116,7 +162,7 @@ footer .footer-contact a i {
 
 body {
   margin: 0;
-  background-color: rgb(252, 253, 251);
+  background-color: rgb(240, 253, 240);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -129,6 +175,10 @@ main {
 main .box {
   display: flex;
   flex-direction: column;
+  background-color: rgb(240, 253, 240);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 main .box .heading {
   display: flex;
@@ -136,55 +186,169 @@ main .box .heading {
   padding: 30px 0px 20px 0px;
   text-align: center;
   margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 2.5em;
+  color: rgb(34, 85, 23);
+  animation: slideInDown 1s ease-in-out;
+}
+main .box .heading:hover {
+  animation: pulse 1s infinite;
+  cursor: pointer;
 }
 main .box .about {
   display: flex;
   justify-content: space-around;
   text-align: left;
   padding: 50px;
+  background-color: rgb(230, 245, 230);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 @media screen and (max-width: 1080px) {
   main .box .about {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0px 30px 80px 30px;
+    padding: 20px;
   }
 }
 main .box .about article {
   max-width: 800px;
   text-align: justify;
   padding: 0px 40px 0px 0px;
+  font-family: "Georgia", serif;
+  color: rgb(51, 51, 51);
 }
 @media screen and (max-width: 1080px) {
   main .box .about article {
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
+    padding: 0px;
     -moz-text-align-last: center;
          text-align-last: center;
-    padding: 0px;
   }
+}
+main .box .about article h2 {
+  font-size: 2em;
+  color: rgb(34, 85, 23);
+  animation: slideInLeft 1s ease-in-out;
+}
+@media screen and (max-width: 1080px) {
   main .box .about article h2 {
     text-align: center;
   }
 }
+main .box .about article p {
+  line-height: 1.6;
+  animation: fadeInUp 1s ease-in-out;
+}
+main .box .about aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeInRight 1s ease-in-out;
+}
 main .box .about aside img {
   max-width: 400px;
   width: 90vw;
-  border: 5px solid rgb(246, 248, 249);
-  border-radius: 50px;
+  border: 4px solid rgb(34, 85, 23);
+  border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.3s;
+  animation: zoomIn 1s ease-in-out;
+}
+@media screen and (max-width: 1080px) {
+  main .box .about aside img {
+    width: 100%;
+  }
+}
+main .box .about aside img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 main .box .about aside .image-grid-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 400px;
   width: 90vw;
 }
+@media screen and (max-width: 1080px) {
+  main .box .about aside .image-grid-4 {
+    width: 100%;
+  }
+}
 main .box .about aside .image-grid-4 img {
-  border: 5px solid rgb(246, 248, 249);
-  border-radius: 50px;
+  border: 4px solid rgb(34, 85, 23);
+  border-radius: 10px;
   overflow: hidden;
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+main .box .about aside .image-grid-4 img:hover {
+  transform: scale(1.05);
 }
 main .box .about aside .image-grid-row {
   display: flex;
+  gap: 20px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }/*# sourceMappingURL=about.css.map */

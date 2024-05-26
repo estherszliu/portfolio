@@ -1,39 +1,54 @@
 .header-root {
-  color: rgb(246, 248, 249);
-  background: rgb(25, 43, 5);
+  color: rgb(255, 255, 255);
+  background: rgb(34, 85, 23);
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   height: 80px;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1000;
 }
 .header-root .profile-message {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .header-root .profile-message img {
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
 }
 .header-root .profile-message img:hover {
-  transform: scale(1.2);
-  border: 2px solid pink;
+  transform: scale(1.1);
+  border: 2px solid rgb(144, 238, 144);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .header-root .profile-message label {
   padding-left: 20px;
   display: flex;
   align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 .header-root nav .nav-button {
   all: unset;
-  padding: 20px 20px 20px 20px;
+  padding: 16px 24px 16px 24px;
+  margin: -4.5px;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
 }
 .header-root nav .nav-button:hover {
-  color: pink;
+  color: rgb(144, 238, 144);
+  border-bottom: 2px solid rgb(144, 238, 144);
   cursor: pointer;
 }
 .header-root nav .nav-icon {
@@ -44,33 +59,50 @@
     display: block;
     margin: 0px 10px 0px 0px;
     font-size: 40px;
-    color: rgb(246, 248, 249);
+    color: rgb(255, 255, 255);
   }
   .header-root nav .nav-icon:hover {
     cursor: pointer;
-    color: pink;
+    color: rgb(144, 238, 144);
   }
   .header-root nav .nav-buttons-root {
-    background-color: rgb(244, 250, 244);
-    color: rgb(25, 43, 5);
+    all: unset;
+    background-color: rgb(34, 85, 23);
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 90px;
     display: flex;
     flex-direction: column;
     width: 60%;
     max-width: 200px;
-    border: 2px solid rgb(25, 43, 5);
+    border: 2px solid rgb(34, 85, 23);
     border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 9999;
   }
   .header-root nav .nav-buttons-root-hide {
     display: none;
   }
+  .header-root nav .nav-button {
+    all: unset;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .header-root nav .nav-button:hover {
+    all: unset;
+    padding: 10px 20px;
+    background-color: rgb(34, 85, 23);
+    color: rgb(255, 255, 255);
+  }
 }
 
 footer {
-  background-color: rgb(25, 43, 5);
-  color: rgb(246, 248, 249);
+  background-color: rgb(34, 85, 23);
+  color: rgb(255, 255, 255);
   padding: 30px 10px 40px 10px;
   text-align: center;
   display: flex;
@@ -87,24 +119,38 @@ footer .social-media a {
   cursor: default;
 }
 footer .social-media a i {
-  color: rgb(246, 248, 249);
-  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
 }
 footer .footer-contact a {
   all: unset;
-  border: 1px solid white;
-  padding: 10px;
-  color: rgb(246, 248, 249);
+  display: inline-block;
+  border: 2px solid white;
+  padding: 15px 30px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 25px;
+  background: #327d22;
+  font-size: 1.2em;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+footer .footer-contact a:hover {
+  background-color: #42a52d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 footer .footer-contact a i {
-  color: rgb(246, 248, 249);
-  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+footer .footer-contact a i:hover {
+  color: white;
 }
 @media screen and (min-width: 1080px) {
   footer footer .social-media {
@@ -116,7 +162,7 @@ footer .footer-contact a i {
 
 body {
   margin: 0;
-  background-color: rgb(252, 253, 251);
+  background-color: rgb(240, 253, 240);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -129,13 +175,18 @@ main {
   align-items: center;
 }
 main .contact-heading {
-  font-size: large;
-  padding: 40px 0 40px 0;
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px 0;
   margin: 0;
+}
+main .contact-heading p {
+  font-size: 1.2rem;
+  color: rgb(51, 51, 51);
 }
 @media screen and (max-width: 1080px) {
   main .contact-heading {
-    padding: 40px 0 0 0;
+    padding: 40px 0 0;
   }
 }
 main .body-content {
@@ -146,45 +197,119 @@ main .body-content {
 }
 main .contact-me-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: start;
-  max-width: 1500px;
-  width: 90vw;
-  padding: 30px 0px 50px 0px;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px 0 50px;
+  position: relative;
 }
 @media screen and (max-width: 1080px) {
   main .contact-me-container {
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    width: 100%;
   }
 }
-main .contact-me-container .image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main .contact-me-container .divider {
+  width: 1px;
+  height: 85%;
+  background-color: rgb(34, 85, 23);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-main .contact-me-container .image-container img {
-  padding: 20px;
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .divider {
+    display: none;
+  }
+}
+main .contact-me-container .contact-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 480px;
+  animation: fadeIn 3s ease-in-out;
+}
+main .contact-me-container .contact-form-container .contact-form {
   max-width: 400px;
   width: 100%;
-  border-radius: 100%;
+  padding: 20px 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .contact-form-container .contact-form {
+    padding: 20px;
+    width: 100%;
+  }
+}
+main .contact-me-container .contact-form-container .contact-form textarea {
+  resize: none;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container label {
+  font-size: 1rem;
+  color: rgb(51, 51, 51);
+  margin-bottom: 5px;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container input,
+main .contact-me-container .contact-form-container .contact-form .form-input-container textarea {
+  padding: 10px;
+  border: 1px solid rgb(34, 85, 23);
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container input:focus,
+main .contact-me-container .contact-form-container .contact-form .form-input-container textarea:focus {
+  border-color: rgb(255, 255, 255);
+  outline: none;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div button {
+  all: unset;
+  background-color: rgb(34, 85, 23);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid rgb(34, 85, 23);
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div button:hover {
+  background-color: rgb(144, 238, 144);
+  color: rgb(34, 85, 23);
+  text-decoration: none;
+  border: 2px solid rgb(144, 238, 144);
 }
 main .contact-me-container .contact-details-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  padding: 20px 0px 20px 40px;
 }
 @media screen and (max-width: 1080px) {
   main .contact-me-container .contact-details-container {
-    padding: 0 0 40px 0;
+    padding: 40px 0px 0px 0px;
     align-items: center;
   }
 }
 main .contact-me-container .contact-details-container .contact-item {
   display: flex;
   flex-direction: column;
-  padding: 20px 0 10px 0;
+  padding: 10px 0 6px;
   width: 100%;
 }
 @media screen and (max-width: 1080px) {
@@ -196,17 +321,17 @@ main .contact-me-container .contact-details-container .contact-item .contact-tit
   display: flex;
 }
 main .contact-me-container .contact-details-container .contact-item i {
-  font-size: 25px;
+  font-size: 28px;
   padding-right: 10px;
 }
 main .contact-me-container .contact-details-container .contact-item a {
-  color: rgb(25, 43, 5);
+  color: rgb(34, 85, 23);
 }
 main .contact-me-container .contact-details-container .contact-item a i {
   font-size: 40px;
 }
 main .contact-me-container .contact-details-container .social-items {
-  padding: 0px 0 10px 0;
+  padding: 0 0 10px;
   width: 100%;
   display: flex;
 }
@@ -223,61 +348,168 @@ main .contact-me-container .contact-details-container .social-items i {
   padding-right: 10px;
 }
 main .contact-me-container .contact-details-container .social-items a {
-  color: rgb(25, 43, 5);
+  color: rgb(34, 85, 23);
 }
 main .contact-me-container .contact-details-container .social-items a i {
   font-size: 40px;
 }
 main .contact-me-container .contact-details-container .download-tag {
   display: flex;
-  padding: 30px 0px 0px 0px;
+  padding: 30px 0 0;
 }
 main .contact-me-container .contact-details-container .download-tag a {
   text-decoration: none;
-  border: 1px solid black;
+  border: 2px solid rgb(34, 85, 23);
   padding: 10px;
-  background-color: rgb(25, 43, 5);
+  background-color: rgb(34, 85, 23);
   color: white;
   border-radius: 5px;
 }
 main .contact-me-container .contact-details-container .download-tag a:hover {
-  color: pink;
+  background-color: rgb(144, 238, 144);
+  color: rgb(34, 85, 23);
   text-decoration: none;
+  border: 2px solid rgb(144, 238, 144);
 }
-main .contact-form-container {
+main .image-container-wrapper {
+  background-color: rgb(220, 243, 220);
+  width: 100%;
+  padding: 100px 0 40px 0;
   display: flex;
   justify-content: center;
-  background-color: lightgrey;
-  width: 100%;
-  padding: 20px;
+  z-index: 1;
 }
-main .contact-form-container .contact-form {
-  max-width: 400px;
-  width: 100%;
-  padding: 30px;
-  display: column;
-  align-items: flex-end;
-}
-@media screen and (max-width: 1080px) {
-  main .contact-form-container .contact-form {
-    padding: 30px 0px 30px 0px;
-    width: 100%;
-  }
-}
-main .contact-form-container .contact-form textarea {
-  resize: none;
-}
-main .contact-form-container .contact-form .form-input-container {
-  padding: 10px 0 10px 0;
+main .image-container-wrapper .image-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 3s ease-in-out;
 }
-main .contact-form-container .contact-form .btn-div button {
-  all: unset;
-  background-color: rgb(25, 43, 5);
-  color: white;
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
+main .image-container-wrapper .image-container img {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .image-container-wrapper .image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+}
+main .image-container-wrapper .image-container .shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgb(34, 85, 23), rgb(255, 255, 255));
+  opacity: 0.6;
+  z-index: -1;
+  animation: color-change 8s infinite;
+}
+main .image-container-wrapper .image-container .shape-1 {
+  width: 220px;
+  height: 220px;
+  top: -10px;
+  left: -10px;
+  animation: move-1 12s ease-in-out infinite, color-change 8s infinite;
+}
+main .image-container-wrapper .image-container .shape-2 {
+  width: 240px;
+  height: 240px;
+  top: -20px;
+  left: -20px;
+  background: linear-gradient(45deg, rgb(255, 255, 255), rgb(34, 85, 23));
+  opacity: 0.4;
+  animation: move-2 15s ease-in-out infinite, color-change 8s infinite;
+}
+main .image-container-wrapper .image-container .shape-3 {
+  width: 180px;
+  height: 180px;
+  top: 50px;
+  left: 50px;
+  background: linear-gradient(45deg, rgb(34, 85, 23), rgb(255, 255, 255));
+  opacity: 0.5;
+  animation: move-3 18s ease-in-out infinite, color-change 8s infinite;
+}
+@keyframes move-1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(40px, -30px) rotate(60deg);
+  }
+  40% {
+    transform: translate(-30px, 50px) rotate(120deg);
+  }
+  60% {
+    transform: translate(30px, 40px) rotate(180deg);
+  }
+  80% {
+    transform: translate(-40px, -50px) rotate(240deg);
+  }
+}
+@keyframes move-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-50px, 30px) rotate(-45deg);
+  }
+  40% {
+    transform: translate(40px, -60px) rotate(-90deg);
+  }
+  60% {
+    transform: translate(-30px, 40px) rotate(-135deg);
+  }
+  80% {
+    transform: translate(50px, -30px) rotate(-180deg);
+  }
+}
+@keyframes move-3 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(60px, 20px) rotate(30deg);
+  }
+  40% {
+    transform: translate(-40px, -60px) rotate(60deg);
+  }
+  60% {
+    transform: translate(50px, 30px) rotate(90deg);
+  }
+  80% {
+    transform: translate(-60px, -40px) rotate(120deg);
+  }
+}
+@keyframes color-change {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main .contact-heading {
+  animation: fadeInUp 1s ease-in-out;
+}
+main .contact-me-container {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+main .image-container-wrapper {
+  animation: fadeInUp 2s ease-in-out;
 }/*# sourceMappingURL=contact.css.map */

@@ -66,7 +66,6 @@
     color: rgb(144, 238, 144);
   }
   .header-root nav .nav-buttons-root {
-    all: unset;
     background-color: rgb(34, 85, 23);
     position: absolute;
     right: 20px;
@@ -85,16 +84,13 @@
     display: none;
   }
   .header-root nav .nav-button {
-    all: unset;
     padding: 10px 20px;
     text-align: left;
     width: 100%;
-    margin: 0px;
     transition: background-color 0.3s, color 0.3s;
   }
   .header-root nav .nav-button:hover {
     all: unset;
-    padding: 10px 20px;
     background-color: rgb(34, 85, 23);
     color: rgb(255, 255, 255);
   }
@@ -171,124 +167,227 @@ body {
 
 main {
   display: flex;
-  justify-content: center;
-  padding: 80px 120px 80px 120px;
-  height: 100%;
-  animation: fadeIn 1s ease-in-out;
-}
-@media screen and (max-width: 1080px) {
-  main {
-    text-align: center;
-    padding: 40px;
-  }
-}
-main .content-wrapper {
   flex-direction: column;
-  display: flex;
-  animation: fadeInUp 1s ease-in-out;
+  align-items: center;
+}
+main .contact-heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px 0;
+  margin: 0;
+}
+main .contact-heading p {
+  font-size: 1.2rem;
+  color: rgb(51, 51, 51);
 }
 @media screen and (max-width: 1080px) {
-  main .content-wrapper {
-    align-items: center;
+  main .contact-heading {
+    padding: 40px 0 0;
   }
 }
-main .bio-heading {
-  text-align: center;
-  margin-bottom: 20px;
-  animation: fadeInDown 1s ease-in-out;
-}
-main .bio-heading h1 {
-  font-size: 2.5em;
-  color: rgb(34, 85, 23);
-  margin-bottom: 10px;
-  position: relative;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-main .bio-heading h1:after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 4px;
-  background-color: rgb(34, 85, 23);
-  margin: 10px auto;
-  border-radius: 2px;
-}
-main .bio-heading h4 {
-  font-size: 1.5em;
-  color: rgb(230, 245, 230);
-  margin-bottom: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-main .bio-root {
+main .body-content {
   display: flex;
-  animation: fadeInLeft 1s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main .contact-me-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px 0 50px;
+  position: relative;
 }
 @media screen and (max-width: 1080px) {
-  main .bio-root {
+  main .contact-me-container {
     flex-direction: column;
     align-items: center;
   }
 }
-main .bio-root .bio-description {
-  max-width: 700px;
-  padding: 0px 100px 0px 0px;
-}
-main .bio-root .bio-description p {
-  text-align: justify;
+main .contact-me-container .divider {
+  width: 1px;
+  height: 90%;
+  background-color: rgb(34, 85, 23);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 1080px) {
-  main .bio-root .bio-description {
-    padding: 40px 40px 80px 40px;
-  }
-  main .bio-root .bio-description p {
-    -moz-text-align-last: center;
-         text-align-last: center;
+  main .contact-me-container .divider {
+    display: none;
   }
 }
-@media screen and (max-width: 600px) {
-  main .bio-root .bio-description {
-    padding: 30px 0px 80px 0px;
-  }
-  main .bio-root .bio-description p {
-    -moz-text-align-last: center;
-         text-align-last: center;
+main .contact-me-container .contact-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 480px;
+  animation: fadeIn 3s ease-in-out;
+}
+main .contact-me-container .contact-form-container .contact-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .contact-form-container .contact-form {
+    padding: 20px;
+    width: 100%;
   }
 }
-main .bio-root .bio-highlights, main .bio-root .bio-values, main .bio-root .bio-collaboration {
-  margin-bottom: 20px;
+main .contact-me-container .contact-form-container .contact-form textarea {
+  resize: none;
 }
-main .bio-root .bio-highlights h5, main .bio-root .bio-values h5, main .bio-root .bio-collaboration h5 {
-  margin-bottom: 10px;
+main .contact-me-container .contact-form-container .contact-form .form-input-container {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container label {
+  font-size: 1rem;
+  color: rgb(51, 51, 51);
+  margin-bottom: 5px;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container input,
+main .contact-me-container .contact-form-container .contact-form .form-input-container textarea {
+  padding: 10px;
+  border: 1px solid rgb(34, 85, 23);
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+main .contact-me-container .contact-form-container .contact-form .form-input-container input:focus,
+main .contact-me-container .contact-form-container .contact-form .form-input-container textarea:focus {
+  border-color: rgb(255, 255, 255);
+  outline: none;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div button {
+  all: unset;
+  background-color: rgb(34, 85, 23);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid rgb(34, 85, 23);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+main .contact-me-container .contact-form-container .contact-form .btn-div button:hover {
+  background-color: rgb(255, 255, 255);
   color: rgb(34, 85, 23);
 }
-main .bio-root .bio-highlights ul, main .bio-root .bio-values ul, main .bio-root .bio-collaboration ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-main .bio-root .bio-highlights ul li, main .bio-root .bio-values ul li, main .bio-root .bio-collaboration ul li {
-  margin-bottom: 10px;
-}
-main .bio-root aside {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  animation: zoomIn 1s ease-in-out;
-}
-main .bio-root aside img {
+main .contact-me-container .contact-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding: 20px 0px 20px 40px;
+}
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .contact-details-container {
+    padding: 40px 0px 0px 0px;
+    align-items: center;
+  }
+}
+main .contact-me-container .contact-details-container .contact-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 6px;
+  width: 100%;
+}
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .contact-details-container .contact-item {
+    align-items: center;
+  }
+}
+main .contact-me-container .contact-details-container .contact-item .contact-title {
+  display: flex;
+}
+main .contact-me-container .contact-details-container .contact-item i {
+  font-size: 28px;
+  padding-right: 10px;
+}
+main .contact-me-container .contact-details-container .contact-item a {
+  color: rgb(34, 85, 23);
+}
+main .contact-me-container .contact-details-container .contact-item a i {
+  font-size: 40px;
+}
+main .contact-me-container .contact-details-container .social-items {
+  padding: 0 0 10px;
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 1080px) {
+  main .contact-me-container .contact-details-container .social-items {
+    justify-content: center;
+  }
+}
+main .contact-me-container .contact-details-container .social-items .contact-title {
+  display: flex;
+}
+main .contact-me-container .contact-details-container .social-items i {
+  font-size: 25px;
+  padding-right: 10px;
+}
+main .contact-me-container .contact-details-container .social-items a {
+  color: rgb(34, 85, 23);
+}
+main .contact-me-container .contact-details-container .social-items a i {
+  font-size: 40px;
+}
+main .contact-me-container .contact-details-container .download-tag {
+  display: flex;
+  padding: 30px 0 0;
+}
+main .contact-me-container .contact-details-container .download-tag a {
+  text-decoration: none;
+  border: 2px solid rgb(34, 85, 23);
+  padding: 10px;
+  background-color: rgb(34, 85, 23);
+  color: white;
+  border-radius: 5px;
+}
+main .contact-me-container .contact-details-container .download-tag a:hover {
+  background-color: rgb(144, 238, 144);
+  color: rgb(34, 85, 23);
+  text-decoration: none;
+}
+main .image-container-wrapper {
+  background-color: rgb(220, 243, 220);
+  width: 100%;
+  padding: 100px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+main .image-container-wrapper .image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 3s ease-in-out;
+}
+main .image-container-wrapper .image-container img {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
   border-radius: 50%;
-  border: 4px solid rgb(34, 85, 23);
-  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
 }
-main .bio-root aside img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-main .bio-root aside .shape {
+main .image-container-wrapper .image-container .shape {
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(45deg, rgb(34, 85, 23), rgb(255, 255, 255));
@@ -296,14 +395,14 @@ main .bio-root aside .shape {
   z-index: -1;
   animation: color-change 8s infinite;
 }
-main .bio-root aside .shape-1 {
+main .image-container-wrapper .image-container .shape-1 {
   width: 220px;
   height: 220px;
   top: -10px;
   left: -10px;
   animation: move-1 12s ease-in-out infinite, color-change 8s infinite;
 }
-main .bio-root aside .shape-2 {
+main .image-container-wrapper .image-container .shape-2 {
   width: 240px;
   height: 240px;
   top: -20px;
@@ -312,7 +411,7 @@ main .bio-root aside .shape-2 {
   opacity: 0.4;
   animation: move-2 15s ease-in-out infinite, color-change 8s infinite;
 }
-main .bio-root aside .shape-3 {
+main .image-container-wrapper .image-container .shape-3 {
   width: 180px;
   height: 180px;
   top: 50px;
@@ -320,157 +419,6 @@ main .bio-root aside .shape-3 {
   background: linear-gradient(45deg, rgb(34, 85, 23), rgb(255, 255, 255));
   opacity: 0.5;
   animation: move-3 18s ease-in-out infinite, color-change 8s infinite;
-}
-main .skills-root {
-  max-width: 620px;
-  padding: 20px;
-  background-color: rgb(220, 243, 220);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeInRight 1s ease-in-out;
-}
-@media screen and (max-width: 1080px) {
-  main .skills-root {
-    text-align: center;
-    margin: 100px 0px 0px 0px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .skills-root {
-    padding: 30px 0px 80px 0px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
-}
-main .skills-root h2 {
-  font-size: 2em;
-  color: rgb(34, 85, 23);
-  margin-bottom: 20px;
-}
-main .skills-root .skills-category {
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 1080px) {
-  main .skills-root .skills-category {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .skills-root .skills-category {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-  }
-}
-main .skills-root .skills-category h3 {
-  font-size: 1.2em;
-  color: rgb(34, 85, 23);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  text-align: left;
-}
-main .skills-root .skills-category .skills-row-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10px;
-}
-@media screen and (max-width: 1080px) {
-  main .skills-root .skills-category .skills-row-container {
-    justify-content: center;
-    display: flex;
-  }
-}
-@media screen and (max-width: 600px) {
-  main .skills-root .skills-category .skills-row-container {
-    flex-direction: row;
-    align-items: center;
-    display: flex;
-  }
-}
-main .skills-root .skill-lozenge {
-  background-color: rgb(34, 85, 23);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(34, 85, 23);
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-size: 0.9em;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, background-color 0.3s, color 0.3s;
-  cursor: default;
-}
-main .skills-root .skill-lozenge:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(34, 85, 23);
-  transform: translateY(-3px);
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInRight {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 @keyframes move-1 {
   0%, 100% {
@@ -530,4 +478,4 @@ main .skills-root .skill-lozenge:hover {
   100% {
     filter: hue-rotate(360deg);
   }
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=contact.css.map */

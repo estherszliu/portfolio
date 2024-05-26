@@ -5,7 +5,7 @@
 // <!-- graphical component and semantic HTML by used footer element --> //
 footer {
     background-color: $primary-color;
-    color:$nav-botton-color;
+    color:$nav-button-color;
     padding: 30px 10px 40px 10px;
     text-align:center;
 
@@ -21,8 +21,8 @@ footer {
             all: unset;
             cursor: default;
             i {
-                color: $nav-botton-color;
-                font-size: 30px;
+                color: $nav-button-color;
+                font-size: 40px;
                 padding: 10px;
                 margin: 10px;
                 cursor: pointer;
@@ -30,31 +30,46 @@ footer {
         }
     }
     .footer-contact {
-        a{  
+        a {
             all: unset;
-            border: 1px solid white;
-            padding: 10px;
-            color: $nav-botton-color;
+            display: inline-block;
+            border: 2px solid white;
+            padding: 15px 30px;
+            color: $nav-button-color;
             text-decoration: none;
-            border-radius: 15px;
+            border-radius: 25px;
+            background: lighten($primary-color, 10%);
+            font-size: 1.2em;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: lighten($primary-color, 20%);
+                // color: darken($nav-button-color, 20%);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            }
+
             i {
-                color: $nav-botton-color;
-                font-size: 15px;
-            }   
-        }  
+                color: $nav-button-color;
+                font-size: 20px;
+                margin-left: 10px;
+                transition: color 0.3s;
 
-    }
-
-
-
-@media screen and (min-width: $large) {
-    footer {
-        .social-media {
-            width: 40%;
-            margin-left: auto;
-            margin-right: auto;
+                &:hover {
+                    color: lighten($nav-button-color, 10%);
+                }
+            }
         }
     }
-}
+
+    @media screen and (min-width: $large) {
+        footer {
+            .social-media {
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }
